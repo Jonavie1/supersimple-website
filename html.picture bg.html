@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PERSONAL PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <style>
+        .image-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #122b3d;
+            color: #ededed;
+        }
+
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgb(6, 6, 46);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .emman {
+         display: block;
+         margin-left: auto;
+         margin-right: 0;
+         float: right; 
+         border-radius: 70%;
+         margin-top: -10px;
+         margin-left: -20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        
+
+        .navbar {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         background-color: #081b29; 
+         padding: 15px;
+       }
+
+         .navbar a {
+         text-decoration: none;
+         color: #ededed; 
+         font-weight: bold;
+         font-size: 16px;
+         transition: color 0.3s ease; 
+        }
+
+        .navbar a:hover {
+         color: #00abf0; 
+        }
+
+
+      
+        .home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .home-content {
+            max-width: 800px;
+        }
+
+        .home-content h1 {
+            font-size: 50px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: yellow;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #00abf0;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            margin: 20px 0 40px;
+        }
+
+        .home-content .btn-box {
+            width: 345px;
+            height: 50px;
+        }
+
+        .btn-box a {
+            position: relative;
+            width: 150px;
+            height: 100%;
+            background: #00abf0;
+            border: 2px solid #00abf0;
+            border-radius: 8px;
+            font-size: 19px;
+            color: #081b29;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .btn-box a:hover {
+            color: #00abf0;
+        }
+
+        .btn-box a:nth-child(2) {
+            background: transparent;
+            color: #00abf0;
+        }
+
+        .btn-box a:nth-child(2):hover {
+            color: #081b29;
+        }
+
+        .btn-box a:nth-child(2)::before {
+            background: #00abf0;
+        }
+
+        .btn-box a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #081b29;
+            z-index: 1;
+            
+        }
+
+        .btn-box a:hover::before {
+            width: 100%;
+        }
+
+        .home-sci {
+            position: absolute;
+            bottom: 40px;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home-sci a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .home-sci a:hover {
+            color: #081b29;
+        }
+
+        .home-sci a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #00abf0;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        .home-sci a:hover::before {
+            width: 100%;
+        }
+
+        section {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        h1, h2, h4 {
+            color: #00abf0;
+        }
+
+
+        #home {
+         background-color: #081b29;
+         padding: 50px 10%;
+         text-align: center;
+        }
+
+        #welcome-container {
+         max-width: 800px;
+         margin: 0 auto;
+        }
+
+
+#about {
+    background-color: #081b29;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+ph1 {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: red;
+}
+
+ph2 {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: white;
+}
+
+ph3{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: yellow;
+}
+
+.bio-container p1{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.bio-container p2{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: green;
+}
+
+.bio-container p3{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: yellow;
+}
+
+.bio-container p4{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: red;
+}
+
+#home h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: rgb(144, 175, 175);
+}
+
+#about h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: rgb(144, 175, 175);
+}
+
+#projects {
+         background-color: #286591;
+         padding: 50px 10%;
+         text-align: center;
+        }
+        #projects h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.project h2{
+    color: rgb(144, 175, 175)
+}
+
+
+
+
+#projects {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project {
+    position: relative;
+    margin-bottom: 20px; /* Add some margin between projects */
+}
+
+.project img {
+            width: 100px; 
+            height: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <body>
+        <img src="pictures/picturebg.jpg" class="image-background" alt="Background Image">
+        <div style="text-align: center;">
+    <div style="text-align: center;">
+        <img src="pictures/picture.png" class="emman" style="width: 500px; display: inline-block;" alt="Vince's Image">
+    </div>
+    <header class="header">
+        <a href="#" class="logo">Mario Emmanuel C. Lachica</a>
+        <nav class="navbar">
+            <a href="#">Photographer  --- Programmer ---  Multi Media Associate  --- Handsomeness</a>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Mr. Lachica</h1>
+            <h3> BEST WEB DESIGNER IN THE WORLD</h3>
+            <p>"Behind the shadows, where whispers carry more weight than words, and loyalty is forged in silence, navigate the intricate dance of power and allegiance, rewriting the rules of the underworld with a pen dipped in ink as dark as their secrets."</p>
+            <div class="btn-box">
+                <a href="#">Message Me</a>
+                <a href="#">I'm Always Here</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.facebook.com/emman.lachcia/" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/emman_super/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.twitch.tv/emmanlachica123" target="_blank"><i class='bx bxl-twitch'></i></a>
+        </div>
+    </section>
+
+    <section id="home">
+        <h1>Welcome To My Website</h1>
+        
+        <div class="welcome-container">
+            <ph1>
+                Step into the enchanting realm of my website, a virtual sanctuary where innovation and creativity gracefully unfold. With each click, a door opens to a world where technology and imagination dance in harmonious unity. Allow yourself to wander through the intricate tapestry of my passions and endeavors. Join me on this digital odyssey, where every pixel tells a unique story, and each interaction extends an invitation to embark on a journey through the captivating landscape of my experiences and creations.
+            </ph1>
+            <ph2>
+                I am thrilled to welcome you to a space that reflects my insatiable curiosity and passion. As a computer science enthusiast, I navigate the intricate landscapes of technology, seeking to transform knowledge into a powerful tool for innovation and problem-solving. The endless possibilities within the digital realm captivate me, and the prospect of crafting solutions that shape the future propels my passion for this dynamic field. Join me on this odyssey, where we explore the boundless horizons of technology together.
+            </ph2>
+            
+                <ph3>
+                    This website is more than just a collection of pages; it's a digital odyssey where every pixel narrates a unique story. Immerse yourself in the delicate artistry of a dedicated computer science student who extends their creative journey into the realms of photography and video making. Beyond the confines of code, I freeze moments in time, creating a tapestry of memories. Come, breathe life into ideas with me, and explore the dynamic intersection of technology and the visual arts. Welcome to a space where stories come alive, and possibilities are limitless.
+                </ph3>
+            </div>
+            
+       
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="bio-container">
+            <p1>
+                Hello! I'm MARIO EMMANUEL C. LACHICA,
+            </p1>
+            <p2>
+                 why I chose this course? Computer Science is a field that encourages innovation and creativity. Students have the opportunity to create new software, design innovative applications, and contribute to technological advancements.
+            </p2>
+            <p3>
+                The demand for skilled professionals in the field of computer science is high. Pursuing a BSCS degree opens up various career opportunities in areas such as software development, cybersecurity, data science, artificial intelligence, and more.
+            </p3>
+            <p4>
+                Technology evolves rapidly, and computer scientists need to stay updated with the latest trends and advancements. If you enjoy continuous learning and staying at the forefront of technology, BSCS provides an environment for ongoing intellectual growth.
+        </div>  
+        
+    </section>
+
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="project">
+            <h2>Project 1</h2>
+            <p>Flames Games</p>
+            <img src="pictures/flames.webp" alt="Project 1 Image"> 
+        </div>
+        <div class="project">
+            <h2>Project 2</h2>
+            <p>Simple Calculator</p>
+            <img src="pictures/calcu.jpg" alt="Project 2 Image">
+        </div>
+        <div class="project">
+            <h2>Project 3</h2>
+            <p>Bus fare code</p>
+            <img src="pictures/bus.jpg" alt="Project 3 Image">
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; margin-bottom: 20px;">
+        <h2>Contact Me!</h2><br>
+
+        <h4>Address</h4>
+        <p>Km-5 Suicob Tabon, Bislig City</p><br>
+
+        <h4>Google Mail</h4>
+        <p>emmanlachica123@gmail.com</p><br>
+
+        <h4>Phone Number</h4>
+        <p>09476267361</p>
+    </section>
+</html>
